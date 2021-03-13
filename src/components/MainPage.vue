@@ -194,9 +194,6 @@ export default {
       this.users = await JSON.parse(localStorage.getItem('users'));
     },
     editForm(item) {
-      console.log(this.users);
-      console.log(this.users.indexOf(item));
-      console.log(item);
       this.editedIndex = this.users.indexOf(item);
       this.editedItem = {
         fullName: `${item.lastName} ${item.firstName} ${item.middleName}`,
