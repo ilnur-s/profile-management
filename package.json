@@ -1,6 +1,6 @@
 {
-  "name": "atb-group",
-  "version": "0.1.0",
+  "name": "profile-management",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -8,8 +8,10 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vuetify": "^2.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -23,6 +25,7 @@
     "lint-staged": "^9.5.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "vue-cli-plugin-vuetify": "~2.2.2",
     "vue-template-compiler": "^2.6.11"
   },
   "gitHooks": {
