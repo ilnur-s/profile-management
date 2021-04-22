@@ -101,7 +101,7 @@
         </v-dialog>
       </v-toolbar>
     </template>
-    <template v-slot:item.actions="{ item }">
+    <template v-slot:[`item.actions`]="{ item }">
       <v-icon
         small
         class="mr-2"
@@ -162,14 +162,14 @@ export default {
   async mounted() {
     if (localStorage.getItem('users')) {
       try {
-        this.users = await JSON.parse(localStorage.getItem('users'));
+        this.users = JSON.parse(localStorage.getItem('users'));
       } catch {
         alert('Произошла ошибка загрузки данных, попробуйте обновить список, либо перезагрузить страницу');
-        await localStorage.removeItem('users');
+        localStorage.removeItem('users');
       }
     } else {
       await getUsers();
-      this.users = await JSON.parse(localStorage.getItem('users'));
+      this.users = JSON.parse(localStorage.getItem('users'));
     }
   },
   watch: {
